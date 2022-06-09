@@ -25,6 +25,7 @@ import android.util.TypedValue
 import android.view.*
 import android.widget.*
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import com.android.deskclock.BaseActivity
 import com.android.deskclock.R
 import com.android.deskclock.Utils
@@ -70,6 +71,15 @@ class CitySelectionActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.cities_activity)
+
+        // Configure the toolbar.
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeButtonEnabled(true)
+        }
+
         mSearchMenuItemController = SearchMenuItemController(
             getSupportActionBar()!!.getThemedContext(),
             object : SearchView.OnQueryTextListener {

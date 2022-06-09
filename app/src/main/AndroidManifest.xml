@@ -75,24 +75,21 @@
         <activity
             android:name=".ringtone.RingtonePickerActivity"
             android:excludeFromRecents="true"
-            android:taskAffinity=""
-            android:theme="@style/Theme.DeskClock.RingtonePicker" />
+            android:taskAffinity="" />
 
         <activity
             android:name=".worldclock.CitySelectionActivity"
             android:excludeFromRecents="true"
             android:label="@string/cities_activity_title"
             android:parentActivityName=".DeskClock"
-            android:taskAffinity=""
-            android:theme="@style/Theme.DeskClock.CitySelection" />
+            android:taskAffinity="" />
 
         <activity
             android:name=".settings.SettingsActivity"
             android:excludeFromRecents="true"
             android:label="@string/settings"
             android:parentActivityName=".DeskClock"
-            android:taskAffinity=""
-            android:theme="@style/Theme.DeskClock.Settings" />
+            android:taskAffinity="" />
 
         <activity
             android:name=".HandleShortcuts"
@@ -240,8 +237,7 @@
             android:name=".settings.ScreensaverSettingsActivity"
             android:excludeFromRecents="true"
             android:label="@string/screensaver_settings"
-            android:taskAffinity=""
-            android:theme="@style/Theme.DeskClock.Settings" />
+            android:taskAffinity="" />
 
         <service
             android:name=".Screensaver"

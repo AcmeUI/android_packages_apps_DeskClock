@@ -23,6 +23,7 @@ import android.os.Vibrator
 import android.provider.Settings
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import androidx.preference.*
 import com.android.deskclock.BaseActivity
 import com.android.deskclock.R
@@ -42,6 +43,14 @@ class SettingsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.settings)
+
+        // Configure the toolbar.
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            setHomeButtonEnabled(true)
+        }
 
         mOptionsMenuManager.addMenuItemController(NavUpMenuItemController(this))
             .addMenuItemController(*MenuItemControllerFactory.buildMenuItemControllers(this))
